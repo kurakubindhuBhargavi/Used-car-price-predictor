@@ -97,11 +97,13 @@ st.write("\n\n"*2)
 
 filename = 'Auto_Price_Pred_Model.pkl'
 model, model_cols = pickle.load(open(filename, 'rb'))
-
 with st.sidebar:
     st.markdown("### 🚘 Basic Info")
-    make_model = st.selectbox("🚘 Model Selection", 
-        ("Audi A3", "Audi A1", "Opel Insignia", "Opel Astra", "Opel Corsa", "Renault Clio", "Renault Espace", "Renault Duster"))
+
+    make_model = st.selectbox(
+        "🚘 Model Selection",
+        ("Audi A3", "Audi A1", "Opel Insignia", "Opel Astra", "Opel Corsa", "Renault Clio", "Renault Espace", "Renault Duster")
+    )
 
     hp_kW = st.number_input("🔥 Horse Power", min_value=40, max_value=294, value=120, step=5)
 
