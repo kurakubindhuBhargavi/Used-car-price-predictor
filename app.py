@@ -160,9 +160,9 @@ cols = {
 df_show.rename(columns=cols, inplace=True)
 
 # show table
-st.dataframe(df_show)
-st.markdown("## 📊 <span style='color:white;'>Selected Car Specifications</span>", unsafe_allow_html=True)
 
+st.markdown("## 📊 <span style='color:white;'>Selected Car Specifications</span>", unsafe_allow_html=True)
+st.dataframe(df_show)
 
 
 cols = {
@@ -199,8 +199,6 @@ cols = {
 
 df_show = df.copy()
 df_show.rename(columns = cols, inplace = True)
-st.write("Selected Specs: \n")
-st.table(df_show)
 
 
 if st.button("🚀 Predict Price"):
