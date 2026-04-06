@@ -165,40 +165,7 @@ st.markdown("## 📊 <span style='color:white;'>Selected Car Specifications</spa
 st.dataframe(df_show)
 
 
-cols = {
-    "make_model": "Car Model",
-    "hp_kW": "Horse Power",
-    "age": "Age",
-    "km": "km Traveled",
-    "Gears": "Gears",
-    "Gearing_Type": "Gearing Type",
-    "Fuel": "Fuel",
-    "body_type": "Body Type",
-    "Previous_Owners": "Owners",
-    "Displacement_cc": "Engine CC",
-    "Weight_kg": "Weight",
-    "Drive_chain": "Drive Type"
-}
 
-df_show.rename(columns=cols, inplace=True)
-st.dataframe(df_show.style.set_properties(**{
-    'background-color': '#f0f2f6',
-    'color': 'black',
-    'border-color': 'white'
-}))
-df = pd.DataFrame.from_dict([my_dict])
-
-cols = {
-    "make_model": "Car Model",
-    "hp_kW": "Horse Power",
-    "age": "Age",
-    "km": "km Traveled",
-    "Gears": "Gears",
-    "Gearing_Type": "Gearing Type"
-}
-
-df_show = df.copy()
-df_show.rename(columns = cols, inplace = True)
 
 
 if st.button("🚀 Predict Price"):
@@ -226,7 +193,6 @@ if st.button("🚀 Predict Price"):
     
 
     # Extra info
-    st.info("📊 Prediction based on selected car features using Machine Learning model")
 
 st.write("\n\n")
 
